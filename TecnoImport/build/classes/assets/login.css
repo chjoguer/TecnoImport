@@ -1,0 +1,66 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19/07/2019, 22:07:01
+    Author     : Christian Guerrero
+*/
+
+AnchorPane{
+    -fx-background-color: #32485C;
+
+}
+TextField
+{
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+
+}
+Button{
+    -fx-background-radius: 10;
+    -fx-background-color: #417E80 ;
+}
+
+Button:hover {
+    -fx-background-color: #417E80;
+}
+
+Button:pressed, .button:default:hover:pressed {
+  -fx-background-color: white;
+  -fx-text-fill: #1d1d1d;
+  -fx-background-radius: 10;
+
+}
+
+Button:focused {
+    -fx-border-color: #417E80, #417E80;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 10, 10;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+Button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+Button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+Button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
+PasswordField{
+    -fx-background-radius: 12;
+}
+ToggleButton{
+    -fx-background-radius: 12;
+    -fx-background-color: #417E80 ;
+
+}
