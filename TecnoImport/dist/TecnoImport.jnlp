@@ -8,8 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="TecnoImport.jar" size="25884" download="eager" />
-    <jar href="lib\jfoenix-9.0.8.jar" size="2419463" download="eager" />
+    <jar href="TecnoImport.jar" size="27502" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="TecnoImport" >
     <param name="requiredFXVersion" value="8.0+"/>

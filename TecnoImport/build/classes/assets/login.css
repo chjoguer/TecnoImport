@@ -9,13 +9,13 @@ and open the template in the editor.
 */
 
 AnchorPane{
-    -fx-background-color: #32485C;
+    -fx-background-color: white;
 
 }
 TextField
 {
-    -fx-background-color: white;
     -fx-background-radius: 12;
+
 
 }
 Button{
@@ -25,6 +25,9 @@ Button{
 
 Button:hover {
     -fx-background-color: #417E80;
+}
+textArea{
+    -fx-background-radius: 12;
 }
 
 Button:pressed, .button:default:hover:pressed {
@@ -37,7 +40,7 @@ Button:pressed, .button:default:hover:pressed {
 Button:focused {
     -fx-border-color: #417E80, #417E80;
     -fx-border-width: 1, 1;
-    -fx-border-style: solid, segments(1, 1);
+    -fx-border-style: solid ,segments(1, 1);
     -fx-border-radius: 10, 10;
     -fx-border-insets: 1 1 1 1, 0;
 }

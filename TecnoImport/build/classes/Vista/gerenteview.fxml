@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="_rootRutas" prefHeight="611.0" prefWidth="625.0" stylesheets="@../assets/login.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.GerenteController">
+   <children>
+      <Button layoutX="261.0" layoutY="564.0" mnemonicParsing="false" onAction="#ingresarRutas" text="Button" />
+      <Button layoutX="492.0" layoutY="564.0" mnemonicParsing="false" onAction="#ingresarPermisos" text="Button" />
+      <AnchorPane prefHeight="548.0" prefWidth="625.0" />
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="548.0" prefWidth="625.0" />
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="548.0" prefWidth="625.0" />
+      <AnchorPane fx:id="_rootRutas" layoutX="10.0" layoutY="10.0" prefHeight="548.0" prefWidth="625.0">
+         <children>
+            <Label layoutX="24.0" layoutY="67.0" text="Direccion" />
+            <TextField layoutX="108.0" layoutY="63.0" prefHeight="25.0" prefWidth="200.0" />
+            <Label layoutX="24.0" layoutY="110.0" text="Repartidor" />
+            <TextField layoutX="108.0" layoutY="106.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField layoutX="108.0" layoutY="144.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField layoutX="108.0" layoutY="188.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField layoutX="108.0" layoutY="232.0" prefHeight="25.0" prefWidth="200.0" />
+            <Button layoutX="495.0" layoutY="86.0" mnemonicParsing="false" onAction="#ingresarPermisos" text="Registrar" />
+            <Button layoutX="495.0" layoutY="144.0" mnemonicParsing="false" onAction="#ingresarPermisos" prefHeight="25.0" prefWidth="64.0" text="Buscar" />
+            <TextArea layoutX="108.0" layoutY="280.0" prefHeight="104.0" prefWidth="200.0" />
+            <Label layoutX="26.0" layoutY="149.0" text="Entrega" />
+            <Label layoutX="26.0" layoutY="192.0" text="Lugar" />
+            <Label layoutX="26.0" layoutY="280.0" text="Novedades" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="_rootPermisos" layoutX="10.0" layoutY="10.0" prefHeight="548.0" prefWidth="625.0">
+         <children>
+            <Label layoutX="39.0" layoutY="121.0" text="Nombre" />
+            <Label layoutX="39.0" layoutY="156.0" text="Apellido" />
+            <Label layoutX="48.0" layoutY="196.0" text="ID" />
+            <Label layoutX="39.0" layoutY="231.0" text="Lugar" />
+            <TextField layoutX="107.0" layoutY="117.0" />
+            <TextField layoutX="107.0" layoutY="152.0" />
+            <TextField layoutX="107.0" layoutY="192.0" />
+            <TextField layoutX="107.0" layoutY="240.0" />
+            <CheckBox layoutX="332.0" layoutY="156.0" mnemonicParsing="false" text="Regular" />
+            <CheckBox layoutX="332.0" layoutY="196.0" mnemonicParsing="false" text="Administrador" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

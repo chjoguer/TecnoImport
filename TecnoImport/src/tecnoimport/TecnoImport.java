@@ -19,7 +19,7 @@ public class TecnoImport extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/Vista/loginview.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/Vista/gerenteview.fxml"));
                // stage.initStyle(stage.getStyle().);
         stage.setResizable(false);
         Scene scene = new Scene(root);
