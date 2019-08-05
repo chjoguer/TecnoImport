@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="744.0" stylesheets="@../assets/login.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="572.0" prefWidth="744.0" />
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="572.0" prefWidth="744.0" />
+      <Button layoutX="226.0" layoutY="673.0" mnemonicParsing="false" text="Mostrar Produtctos" />
+      <Button layoutX="365.0" layoutY="673.0" mnemonicParsing="false" text="Busqueda Produtctos" />
+      <AnchorPane layoutX="1.0" prefHeight="582.0" prefWidth="753.0">
+         <children>
+            <Label layoutX="24.0" layoutY="35.0" prefHeight="31.0" prefWidth="159.0" text="Busqueda de Productos" />
+            <TextField layoutX="169.0" layoutY="38.0" />
+            <TableView layoutX="50.0" layoutY="76.0" prefHeight="446.0" prefWidth="647.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1.0" prefHeight="582.0" prefWidth="753.0">
+         <children>
+            <ComboBox layoutX="45.0" layoutY="71.0" prefWidth="150.0" promptText="Busqueda" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

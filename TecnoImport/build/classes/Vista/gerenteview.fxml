@@ -9,8 +9,8 @@
 
 <AnchorPane fx:id="_rootRutas" prefHeight="611.0" prefWidth="625.0" stylesheets="@../assets/login.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.GerenteController">
    <children>
-      <Button layoutX="203.0" layoutY="564.0" mnemonicParsing="false" onAction="#ingresarRutas" prefHeight="25.0" prefWidth="136.0" text="Registrar Rutas" />
-      <Button layoutX="361.0" layoutY="564.0" mnemonicParsing="false" onAction="#ingresarPermisos" text="Modificar Permisos" />
+      <Button layoutX="245.0" layoutY="564.0" mnemonicParsing="false" onAction="#ingresarRutas" prefHeight="25.0" prefWidth="136.0" text="Registrar Rutas" />
+      <Button layoutX="406.0" layoutY="564.0" mnemonicParsing="false" onAction="#ingresarPermisos" text="Modificar Permisos" />
       <AnchorPane prefHeight="548.0" prefWidth="625.0" />
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="548.0" prefWidth="625.0" />
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="548.0" prefWidth="625.0" />
@@ -45,5 +45,6 @@
             <CheckBox layoutX="332.0" layoutY="196.0" mnemonicParsing="false" text="Administrador" />
          </children>
       </AnchorPane>
+      <Button layoutX="62.0" layoutY="564.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="136.0" text="Registrar Empleados" />
    </children>
 </AnchorPane>

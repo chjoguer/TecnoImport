@@ -17,7 +17,7 @@ import javafx.scene.layout.Pane;
  *
  * @author Christian Guerrero
  */
-public class GerenteController implements Initializable {
+public class JefeDeBodegaController implements Initializable {
 
     /**
      * Initializes the controller class.
