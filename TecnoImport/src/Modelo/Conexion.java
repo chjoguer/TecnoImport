@@ -22,6 +22,7 @@ public class Conexion implements ConexionDB{
     private static final String PASS = "23198";
     private static final String DATABASE_PATH="jdbc:mysql://localhost:3306/TecnoImportDB?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     private Connection connectionSQL;
+    private Login login;
 
     public Connection getConnectionSQL() {
         return connectionSQL;
@@ -33,11 +34,11 @@ public class Conexion implements ConexionDB{
 
   
     @Override
-    public void conectarDB(Connection conexion) {
+    public void conectarDB() {
         try {
-            connectionSQL = DriverManager.getConnection(USER, USER, PASS);
-        } catch (SQLException ex) {
-            System.err.println(ex.getMessage()+"Error en la conexion");
+            connectionSQL = DriverManager.getConnection(DATABASE_PATH ,USER ,PASS );
+        } catch (SQLException e){
+            System.out.println("Problema al crear la conexiÃ³n con la base de datos"+e.getMessage());
         }
     }
     

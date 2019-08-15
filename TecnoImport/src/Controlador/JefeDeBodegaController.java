@@ -6,6 +6,7 @@
 package Controlador;
 
 import java.net.URL;
+import java.sql.Connection;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -26,7 +27,8 @@ public class JefeDeBodegaController implements Initializable {
     @FXML AnchorPane _rootOpciones;
     @FXML AnchorPane _rootRutas;
     @FXML AnchorPane _rootPermisos;
-
+    private Connection connectionSQL;
+ 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -47,5 +49,15 @@ public class JefeDeBodegaController implements Initializable {
          _rootRutas.setVisible(false);
         _rootPermisos.setVisible(true);
     }
+
+    public void setConnectionSQL(Connection connectionSQL) {
+        this.connectionSQL = connectionSQL;
+    }
+    
+    private void prepare(){
+        
+    }
+     
+     
     
 }

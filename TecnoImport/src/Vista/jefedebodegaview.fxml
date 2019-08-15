@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="_rootRutas" prefHeight="611.0" prefWidth="625.0" stylesheets="@../assets/login.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.GerenteController">
+<AnchorPane fx:id="_rootRutas" prefHeight="611.0" prefWidth="625.0" stylesheets="@../assets/login.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.JefeDeBodegaController">
    <children>
       <Button layoutX="245.0" layoutY="564.0" mnemonicParsing="false" onAction="#ingresarRutas" prefHeight="25.0" prefWidth="136.0" text="Registrar Rutas" />
       <Button layoutX="406.0" layoutY="564.0" mnemonicParsing="false" onAction="#ingresarPermisos" text="Modificar Permisos" />
