@@ -74,6 +74,8 @@ public class ControllerLogin implements Initializable {
             callLogin.setString(1, tempUser);
             callLogin.setString(2, tempPassword);
             callLogin.execute();
+            System.out.println("user"+tempUser);
+            System.out.println("pass"+tempPassword);
             tempID = callLogin.getInt("id");
             tipo   = callLogin.getString("t");
             System.out.println("tipo: "+tipo);

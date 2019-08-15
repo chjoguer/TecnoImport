@@ -1,6 +1,6 @@
 CREATE DATABASE TecnoImportDB;
 USE TecnoImportDB;
-#DROP DATABASE  TecnoImportDB;
+DROP DATABASE  TecnoImportDB;
 CREATE TABLE Login (
 	 IDUSUARIO INT,
      USUARIO   VARCHAR(30),
@@ -8,12 +8,6 @@ CREATE TABLE Login (
      TIPO 	   VARCHAR(1) # 'g' gerente 'v' vendedor 'j' jefeBodega
 );
 
-INSERT INTO Login (IDUSUARIO,USUARIO,CLAVE,TIPO)
-VALUES(111,'chjoguer','sistemas1','g'),
-	  (222,'josepe','cambio','v'),
-	  (333,'benjikrol','ben100','j'),
-	  (444,'miglml','ambition','v');
-      
 CREATE TABLE Locall(
 	IDLOCAL 	INT PRIMARY KEY,
     DIRECCION  	VARCHAR(50),
@@ -145,7 +139,10 @@ CREATE PROCEDURE INVENTARIO()
         FROM Inventario i, Producto p , Bodega b, Locall l WHERE i.IDPRODUCTO = p.IDPRODUCTO 
         AND i.IDBODEGA=b.IDBODEGA AND i.IDLOCAL=l.IDLOCAL;
     END//
-
+set t =' ';
+call login('josepe','cambio',@id,@t);
+select @id ,@t
+select * from login
 
 #--------PROCEDURES DE PRODUCTOS
 CREATE PROCEDURE UPDATESTOCK(IN IDPRODUCT INT, IN NUEVOSTOCK INT)
