@@ -6,13 +6,15 @@
             <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Controlador/JefeDeBodegaController.java</file>
             <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Vista/jefedebodegaview.fxml</file>
             <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Controlador/GerenteController.java</file>
+            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Decorator/DecoratorPermisos.java</file>
             <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Vista/gerenteview.fxml</file>
             <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Vista/loginview.fxml</file>
             <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/tecnoimport/FXMLDocumentController.java</file>
+            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Decorator/Usergerente.java</file>
             <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Controlador/ControllerLogin.java</file>
+            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Modelo/Entrega.java</file>
             <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Modelo/Login.java</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Modelo/Conexion.java</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/assets/tabla.css</file>
+            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Singleton/Conexion.java</file>
             <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Modelo/Pedido.java</file>
             <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Interface/ConexionDB.java</file>
             <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/assets/login.css</file>
@@ -20,6 +22,7 @@
             <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/tecnoimport/TecnoImport.java</file>
             <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Modelo/Producto.java</file>
             <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Vista/vendedorview.fxml</file>
+            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Decorator/Userbasic.java</file>
             <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Controlador/VendedorController.java</file>
         </group>
     </open-files>
