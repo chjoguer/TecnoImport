@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import Singleton.Conexion;
 import Modelo.Login;
 import java.io.IOException;
 import java.net.URL;
@@ -49,10 +50,13 @@ public class ControllerLogin implements Initializable {
     private static final String PASS = "23198";
     private static final String DATABASE_PATH="jdbc:mysql://localhost:3306/TecnoImportDB?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     private Connection connectionSQL;
+    private Conexion cx;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        cx = Conexion.getInstance();
+        
     }   
     /*Cambiar escena en la misma pantalla*/
     /*Esto se lo puede hacer en la clase login como refactor*/
@@ -85,7 +89,11 @@ public class ControllerLogin implements Initializable {
             if (tempID!=0) {
                 switch(tipo){
                     case TIPO_GERENTE:
-                        
+                         root = FXMLLoader.load(getClass().getResource("/Vista/gerenteview.fxml"));
+                        sc = new Scene(root);
+                        window = (Stage)((Node)event.getSource()).getScene().getWindow();
+                        window.setScene(sc);
+                        window.show();
                         break;
                     case TIPO_VENDEDOR:
                         root = FXMLLoader.load(getClass().getResource("/Vista/vendedorview.fxml"));
@@ -107,18 +115,23 @@ public class ControllerLogin implements Initializable {
     }
      public void prepare() {
         try {
-            callLogin = connectionSQL.prepareCall("{CALL login(?,?,?,?)}");
+            callLogin = cx.getConnectionSQL().prepareCall("{CALL login(?,?,?,?)}");
         } catch (SQLException ex) {
             System.err.println("Error de conexion: "+ex.getMessage());
         }
     }
 
+    public Connection getConnectionSQL() {
+        return connectionSQL;
+    }
+
      public void conectarDB() {
         try {
             connectionSQL = DriverManager.getConnection(DATABASE_PATH ,USER ,PASS );
-            JefeDeBodegaController controllerJefe = new JefeDeBodegaController();
+            /*JefeDeBodegaController controllerJefe = new JefeDeBodegaController();
             controllerJefe.setConnectionSQL(connectionSQL);
-            
+            VendedorController controllerVendedor = new VendedorController();
+            controllerVendedor.setConnectionSQL(connectionSQL);*/
             
             
             

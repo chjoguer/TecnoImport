@@ -5,6 +5,7 @@
  */
 package Modelo;
 
+import Singleton.Conexion;
 import Interface.ConexionDB;
 import java.io.IOException;
 import java.sql.CallableStatement;

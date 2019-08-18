@@ -1,20 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="_rootRutas" prefHeight="611.0" prefWidth="625.0" stylesheets="@../assets/login.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.JefeDeBodegaController">
+<AnchorPane fx:id="" prefHeight="611.0" prefWidth="933.0" stylesheets="@../assets/login.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.JefeDeBodegaController">
    <children>
-      <Button layoutX="245.0" layoutY="564.0" mnemonicParsing="false" onAction="#ingresarRutas" prefHeight="25.0" prefWidth="136.0" text="Registrar Rutas" />
-      <Button layoutX="406.0" layoutY="564.0" mnemonicParsing="false" onAction="#ingresarPermisos" text="Modificar Permisos" />
-      <AnchorPane prefHeight="548.0" prefWidth="625.0" />
-      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="548.0" prefWidth="625.0" />
-      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="548.0" prefWidth="625.0" />
-      <AnchorPane fx:id="_rootRutas" layoutX="10.0" layoutY="10.0" prefHeight="548.0" prefWidth="625.0">
+      <Button layoutX="237.0" layoutY="557.0" mnemonicParsing="false" onAction="#ingresarRutas" prefHeight="33.0" prefWidth="149.0" text="Permisos">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8_User_Rights_50px.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="401.0" layoutY="557.0" mnemonicParsing="false" onAction="#ingresarPermisos" prefHeight="33.0" prefWidth="132.0" text="Rutas">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8_Waypoint_Map_50px.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <AnchorPane prefHeight="548.0" prefWidth="933.0" />
+      <AnchorPane layoutX="-2.0" prefHeight="558.0" prefWidth="942.0" />
+      <Button layoutX="62.0" layoutY="558.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="149.0" text="Registrar Empleados">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8_Employee_50px.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="550.0" layoutY="557.0" mnemonicParsing="false" onAction="#entregas" prefHeight="25.0" prefWidth="117.0" text="Entregas">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8_Trolley_50px.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <AnchorPane fx:id="_rootEntregas" layoutX="-7.0" prefHeight="558.0" prefWidth="949.0">
+         <children>
+            <TableView fx:id="tableEntrega" layoutX="353.0" layoutY="56.0" prefHeight="305.0" prefWidth="545.0">
+              <columns>
+                <TableColumn fx:id="column_entrega" prefWidth="75.0" text="Pedido" />
+                <TableColumn fx:id="column_descripcion" prefWidth="114.0" text="Descripcion" />
+                  <TableColumn fx:id="column_dir" prefWidth="99.0" text="Ruta" />
+                  <TableColumn fx:id="colum_nom" prefWidth="139.0" text="Nombre" />
+                  <TableColumn fx:id="column_apel" prefWidth="109.0" text="Apellido" />
+              </columns>
+            </TableView>
+            <TextArea fx:id="description" layoutX="51.0" layoutY="266.0" prefHeight="95.0" prefWidth="244.0" />
+            <Label layoutX="51.0" layoutY="178.0" text="Agregar Descripcion De La Entrega :" />
+            <Button layoutX="51.0" layoutY="376.0" mnemonicParsing="false" onAction="#acutlizarEstadoEntrega" prefHeight="31.0" prefWidth="100.0" text="actualizar">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons8_Shipped_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <TextField fx:id="idEntrega" layoutX="139.0" layoutY="223.0" />
+            <Label layoutX="59.0" layoutY="227.0" text="ID Entrega" />
+            <Label layoutX="45.0" layoutY="127.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="_rootRutas" layoutX="1.0" prefHeight="558.0" prefWidth="935.0">
          <children>
             <Label layoutX="24.0" layoutY="67.0" text="Direccion" />
             <TextField layoutX="108.0" layoutY="63.0" prefHeight="25.0" prefWidth="200.0" />
@@ -31,20 +89,47 @@
             <Label layoutX="26.0" layoutY="280.0" text="Novedades" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="_rootPermisos" layoutX="10.0" layoutY="10.0" prefHeight="548.0" prefWidth="625.0">
+      <AnchorPane fx:id="_rootRutas2" prefHeight="558.0" prefWidth="935.0">
          <children>
-            <Label layoutX="39.0" layoutY="121.0" text="Nombre" />
-            <Label layoutX="39.0" layoutY="156.0" text="Apellido" />
-            <Label layoutX="48.0" layoutY="196.0" text="ID" />
-            <Label layoutX="39.0" layoutY="231.0" text="Lugar" />
-            <TextField layoutX="107.0" layoutY="117.0" />
-            <TextField layoutX="107.0" layoutY="152.0" />
-            <TextField layoutX="107.0" layoutY="192.0" />
-            <TextField layoutX="107.0" layoutY="240.0" />
-            <CheckBox layoutX="332.0" layoutY="156.0" mnemonicParsing="false" text="Regular" />
-            <CheckBox layoutX="332.0" layoutY="196.0" mnemonicParsing="false" text="Administrador" />
+            <TableView fx:id="table" layoutX="447.0" layoutY="77.0" onMouseClicked="#selectItemRepartidor" prefHeight="256.0" prefWidth="467.0">
+              <columns>
+                <TableColumn fx:id="column_nombre" prefWidth="195.0" text="Nombre" />
+                <TableColumn fx:id="column_apellido" prefWidth="125.0" text="Apellido" />
+                  <TableColumn fx:id="column_cantidad" prefWidth="144.0" text="Paquetes" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tablePedido" layoutX="25.0" layoutY="77.0" onMouseClicked="#selectItem" prefHeight="256.0" prefWidth="412.0">
+              <columns>
+                <TableColumn fx:id="column_pedido" prefWidth="97.0" text="Pedido" />
+                <TableColumn fx:id="column_articulo" prefWidth="126.0" text="Articulo" />
+                  <TableColumn fx:id="column_cantidad_pedido" prefWidth="61.0" text="Cantidad" />
+                  <TableColumn fx:id="column_direccion" prefWidth="123.0" text="Direccion" />
+              </columns>
+            </TableView>
+            <TextField fx:id="idPedido" layoutX="147.0" layoutY="367.0" />
+            <TextField fx:id="repartidor" layoutX="147.0" layoutY="409.0" />
+            <Label layoutX="47.0" layoutY="367.0" prefHeight="25.0" prefWidth="81.0" text="Pedido:" />
+            <Label layoutX="47.0" layoutY="410.0" prefHeight="25.0" prefWidth="81.0" text="Repartidor:" />
+            <Button layoutX="319.0" layoutY="367.0" mnemonicParsing="false" onAction="#asignar" prefHeight="25.0" prefWidth="108.0" text="Asignar">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons8_Checked_Checkbox_50px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button layoutX="319.0" layoutY="410.0" mnemonicParsing="false" onAction="#clearReparitdor" prefHeight="25.0" prefWidth="108.0" text="Limpiar">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons8_Erase_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label fx:id="mensaje" layoutX="88.0" layoutY="458.0" prefHeight="17.0" prefWidth="244.0" />
+            <TextArea layoutX="784.0" layoutY="379.0" prefHeight="87.0" prefWidth="108.0" />
+            <Label layoutX="775.0" layoutY="359.0" text="Ganancia Por Entrega:" />
          </children>
       </AnchorPane>
-      <Button layoutX="62.0" layoutY="564.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="136.0" text="Registrar Empleados" />
    </children>
 </AnchorPane>

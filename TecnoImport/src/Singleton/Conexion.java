@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modelo;
+package Singleton;
 
 import Interface.ConexionDB;
+import Modelo.Login;
 import java.sql.Connection;
 import java.sql.Driver;
 import java.sql.DriverManager;
@@ -17,12 +18,20 @@ import java.util.logging.Logger;
  *
  * @author Christian Guerrero
  */
-public class Conexion implements ConexionDB{
+public final class Conexion implements ConexionDB{
     private static final String USER = "root";
     private static final String PASS = "23198";
     private static final String DATABASE_PATH="jdbc:mysql://localhost:3306/TecnoImportDB?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     private Connection connectionSQL;
+    private static final Conexion instance = new Conexion();
     private Login login;
+
+    public Conexion( ) {
+      conectarDB();
+    }
+    public static Conexion getInstance(){
+        return instance;
+    }
 
     public Connection getConnectionSQL() {
         return connectionSQL;
@@ -31,6 +40,7 @@ public class Conexion implements ConexionDB{
     public void setConnectionSQL(Connection connectionSQL) {
         this.connectionSQL = connectionSQL;
     }
+    
 
   
     @Override
