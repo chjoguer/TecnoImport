@@ -5,6 +5,8 @@
  */
 package Controlador;
 
+import Decorator.Userbasic;
+import Modelo.Entrega;
 import Singleton.Conexion;
 import Modelo.Producto;
 import java.io.IOException;
@@ -25,7 +27,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 /**
@@ -52,15 +58,42 @@ public class GerenteController implements Initializable {
     @FXML TextField gerente;
     @FXML TextField bodega;
     
+    @FXML TextField user;
+    @FXML TextField tipo;
+    
+    @FXML TableView<Userbasic> tableUser;
+    @FXML TableColumn<Userbasic, String> column_user;
+    @FXML TableColumn<Userbasic, String> column_tip;
+    @FXML TableColumn<Userbasic, Integer> column_iduser;
+    
+    @FXML AnchorPane _rootPermisos;
+    @FXML AnchorPane _rootAcutualizar;
+
+
+
+    ObservableList<Userbasic> listuser =FXCollections.observableArrayList();
+
+    
+    
     Conexion cx ;
-        private CallableStatement callGetAllProductos,callGetProducto,callUpadteStock,callUpdatePrecio,callSolicitarAbstecimiento;
+    private CallableStatement callGetAllProductos,callGetProducto,callUpadteStock,callUpdatePrecio,callSolicitarAbstecimiento,callUpdatePermisos,callShowUser;
     ObservableList<String> options = FXCollections.observableArrayList();
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         cx = Conexion.getInstance();
+        column_user.setCellValueFactory(new PropertyValueFactory<>("user"));
+        column_tip.setCellValueFactory(new PropertyValueFactory<>("tipo"));
+        column_iduser.setCellValueFactory(new PropertyValueFactory<>("idusuario"));
+        
+        _rootAcutualizar.setVisible(true);
+        _rootPermisos.setVisible(false);
+        
+        
         prepare();
         try {
             llenarComboBox();
+            llenarTableUser();
         } catch (SQLException ex) {
             Logger.getLogger(GerenteController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -74,6 +107,7 @@ public class GerenteController implements Initializable {
         stage.setScene(new Scene(root1));  
         stage.show();        
     }
+   
     public void llenarComboBox() throws SQLException{
         callGetAllProductos.execute();
         ResultSet rs = callGetAllProductos.getResultSet();
@@ -82,6 +116,37 @@ public class GerenteController implements Initializable {
             options.add(rs.getString(1));
         }
         nombres.setItems(options);
+    }
+    public void anchorActualizar(){
+        _rootPermisos.setVisible(false);
+        _rootAcutualizar.setVisible(true);
+    }
+     public void anchorPermisos(){
+        _rootAcutualizar.setVisible(false);
+        _rootPermisos.setVisible(true);
+    }
+    
+    public void actualizarPermisos() throws SQLException{
+        if(!(user.getText().equals("")||tipo.getText().equals(""))){
+            callUpdatePermisos.setString(2, user.getText());
+            callUpdatePermisos.setString(1, tipo.getText());
+            callUpdatePermisos.execute();
+             listuser.clear();
+            tableUser.setItems(listuser);
+            llenarTableUser();
+        }else{
+            System.out.println("No se han actualizado los permisos");
+        }
+       
+    }
+
+    public void llenarTableUser() throws SQLException {
+        callShowUser.execute();
+        ResultSet rs = callShowUser.getResultSet();
+          while(rs.next()){
+            listuser.add(new Userbasic(rs.getString(1), rs.getString(2), rs.getInt(3)));
+        }
+          tableUser.setItems(listuser);
     }
     
     public void solicitarAbas() throws SQLException{
@@ -156,6 +221,8 @@ public class GerenteController implements Initializable {
            callUpadteStock = cx.getConnectionSQL().prepareCall("{CALL UPDATESTOCK(?,?)}");
            callUpdatePrecio = cx.getConnectionSQL().prepareCall("{CALL UPDATEPRECIO(?,?)}");
            callSolicitarAbstecimiento = cx.getConnectionSQL().prepareCall("{CALL SOLICITARPEDIDO(?,?,?,?,?)}");
+           callUpdatePermisos = cx.getConnectionSQL().prepareCall("{CALL UPDATEPERMISOS(?,?)}");
+           callShowUser = cx.getConnectionSQL().prepareCall("{CALL SHOWUSER()}");
         } catch (SQLException ex) {
             System.err.println("Error de conexion: "+ex.getMessage());
         }

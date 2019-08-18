@@ -189,22 +189,24 @@ public class JefeDeBodegaController implements Initializable {
         this.connectionSQL = connectionSQL;
     
     }
-    public Pedido selectItem(){
+    public void selectItem(){
         tablePedido.getSelectionModel().setCellSelectionEnabled(true);
         ObservableList selectedCells = tablePedido.getSelectionModel().getSelectedCells();
         Pedido pedido = tablePedido.getSelectionModel().getSelectedItem();
+        if(pedido==null)
+            return;
          idPedido.setText(String.valueOf(pedido.getIdpedido()));  
 
-        return pedido;
     }
-    public Repartidor selectItemRepartidor(){
+    public void selectItemRepartidor(){
         table.getSelectionModel().setCellSelectionEnabled(true);
         ObservableList selectedCells = table.getSelectionModel().getSelectedCells();
         Repartidor rep = table.getSelectionModel().getSelectedItem();
+        if(rep==null)
+            return ; 
         String x =String.valueOf(rep.getNombre());
         if(x!=null)
             repartidor.setText(x);
-        return rep;
     }
     public void asignar() throws SQLException{
         clear();

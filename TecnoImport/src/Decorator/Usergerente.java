@@ -9,12 +9,14 @@ package Decorator;
  *
  * @author Christian Guerrero
  */
-public class Permisos implements DecoratorPermisos {
+public class Usergerente extends Userbasic {
+
+    public Usergerente(String user, String tipo, Integer idusuario) {
+        super(user, tipo, idusuario);
+    }
 
     
-    public Permisos() {
-        
-    }
+   
 
     @Override
     public String permisosAdministrador() {
