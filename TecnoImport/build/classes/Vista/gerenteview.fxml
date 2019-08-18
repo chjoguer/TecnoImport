@@ -48,22 +48,6 @@
          </children>
       </Pane>
       <AnchorPane layoutX="230.0" prefHeight="732.0" prefWidth="732.0" />
-      <AnchorPane fx:id="_rootPermisos" layoutX="220.0" prefHeight="722.0" prefWidth="732.0">
-         <children>
-            <TextField fx:id="user" layoutX="156.0" layoutY="73.0" />
-            <TextField fx:id="tipo" layoutX="156.0" layoutY="133.0" />
-            <Label layoutX="53.0" layoutY="77.0" text="Usuario :" />
-            <Label layoutX="53.0" layoutY="137.0" text="Permiso :" />
-            <Button layoutX="53.0" layoutY="192.0" mnemonicParsing="false" onAction="#actualizarPermisos" text="Cambiar" />
-            <TableView fx:id="tableUser" layoutX="413.0" layoutY="66.0" prefHeight="200.0" prefWidth="255.0">
-              <columns>
-                <TableColumn fx:id="column_user" prefWidth="75.0" text="Usario" />
-                <TableColumn fx:id="column_tip" prefWidth="99.0" text="Permiso" />
-                  <TableColumn fx:id="column_iduser" minWidth="0.0" prefWidth="75.0" text="ID Usuario" />
-              </columns>
-            </TableView>
-         </children>
-      </AnchorPane>
       <AnchorPane fx:id="_rootAcutualizar" layoutX="230.0" prefHeight="732.0" prefWidth="732.0">
          <children>
             <ComboBox fx:id="nombres" layoutX="441.0" layoutY="54.0" onAction="#changeOptionComboBox" prefWidth="150.0" promptText="Articulos" />
@@ -113,6 +97,22 @@
                      </image>
                   </ImageView>
                </graphic></Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="_rootPermisos" layoutX="220.0" prefHeight="722.0" prefWidth="732.0">
+         <children>
+            <TextField fx:id="user" layoutX="156.0" layoutY="73.0" />
+            <TextField fx:id="tipo" layoutX="156.0" layoutY="133.0" />
+            <Label layoutX="53.0" layoutY="77.0" text="Usuario :" />
+            <Label layoutX="53.0" layoutY="137.0" text="Permiso :" />
+            <Button layoutX="53.0" layoutY="192.0" mnemonicParsing="false" onAction="#actualizarPermisos" text="Cambiar" />
+            <TableView fx:id="tableUser" layoutX="413.0" layoutY="66.0" prefHeight="200.0" prefWidth="255.0">
+              <columns>
+                <TableColumn fx:id="column_user" prefWidth="75.0" text="Usario" />
+                <TableColumn fx:id="column_tip" prefWidth="99.0" text="Permiso" />
+                  <TableColumn fx:id="column_iduser" minWidth="0.0" text="ID Usuario" />
+              </columns>
+            </TableView>
          </children>
       </AnchorPane>
    </children>
