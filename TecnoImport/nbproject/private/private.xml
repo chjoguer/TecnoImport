@@ -3,27 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Controlador/JefeDeBodegaController.java</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Vista/jefedebodegaview.fxml</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Controlador/GerenteController.java</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Decorator/DecoratorPermisos.java</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Vista/gerenteview.fxml</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Vista/loginview.fxml</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/tecnoimport/FXMLDocumentController.java</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Decorator/Usergerente.java</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Controlador/ControllerLogin.java</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Modelo/Entrega.java</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Modelo/Login.java</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Singleton/Conexion.java</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Modelo/Pedido.java</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Interface/ConexionDB.java</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/assets/login.css</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Modelo/Repartidor.java</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/tecnoimport/TecnoImport.java</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Modelo/Producto.java</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Vista/vendedorview.fxml</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Decorator/Userbasic.java</file>
-            <file>file:/C:/Users/Christian%20Guerrero/Documents/NetBeansProjects/Proyecto2Parcial/TecnoImport/src/Controlador/VendedorController.java</file>
+            <file>file:/C:/Users/ilian/Documents/iliana/diseño%20de%20software/Proyeto/TecnoImport/TecnoImport/src/controlador/VendedorController.java</file>
+            <file>file:/C:/Users/ilian/Documents/iliana/diseño%20de%20software/Proyeto/TecnoImport/TecnoImport/src/singleton/Conexion.java</file>
+            <file>file:/C:/Users/ilian/Documents/iliana/diseño%20de%20software/Proyeto/TecnoImport/TecnoImport/src/controlador/JefeDeBodegaController.java</file>
+            <file>file:/C:/Users/ilian/Documents/iliana/diseño%20de%20software/Proyeto/TecnoImport/TecnoImport/src/tecnoimport/TecnoImport.java</file>
+            <file>file:/C:/Users/ilian/Documents/iliana/diseño%20de%20software/Proyeto/TecnoImport/TecnoImport/src/controlador/ControllerLogin.java</file>
+            <file>file:/C:/Users/ilian/Documents/iliana/diseño%20de%20software/Proyeto/TecnoImport/TecnoImport/src/modelo/Login.java</file>
+            <file>file:/C:/Users/ilian/Documents/iliana/diseño%20de%20software/Proyeto/TecnoImport/TecnoImport/src/controlador/GerenteController.java</file>
         </group>
     </open-files>
 </project-private>

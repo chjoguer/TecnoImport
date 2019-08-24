@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="722.0" prefWidth="952.0" stylesheets="@../assets/login.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.GerenteController">
+   <children>
+      <Pane prefHeight="722.0" prefWidth="220.0">
+         <children>
+            <Button layoutX="40.0" layoutY="205.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" text="Abastecimiento">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button layoutX="40.0" layoutY="245.0" mnemonicParsing="false" onAction="#showArticulos" prefHeight="25.0" prefWidth="140.0" text="Articulos">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons8_Search_26px.png" />
+                     </image></ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="40.0" layoutY="283.0" mnemonicParsing="false" onAction="#anchorActualizar" prefHeight="25.0" prefWidth="140.0" text="Actualizar">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/boxes.png" />
+                     </image></ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <Button layoutX="40.0" layoutY="329.0" mnemonicParsing="false" onAction="#anchorPermisos" prefHeight="25.0" prefWidth="140.0" text="Permisos">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons8_User_Rights_50px.png" />
+                     </image></ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="230.0" prefHeight="732.0" prefWidth="732.0" />
+      <AnchorPane fx:id="_rootAcutualizar" layoutX="230.0" prefHeight="732.0" prefWidth="732.0">
+         <children>
+            <ComboBox fx:id="nombres" layoutX="441.0" layoutY="54.0" onAction="#changeOptionComboBox" prefWidth="150.0" promptText="Articulos" />
+            <Label layoutX="33.0" layoutY="120.0" prefHeight="33.0" prefWidth="107.0" text="Cantidad Sotck :" />
+            <TextField fx:id="cantidad" layoutX="170.0" layoutY="123.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="33.0" layoutY="178.0" prefHeight="33.0" prefWidth="107.0" text="Precio :" />
+            <TextField fx:id="precio" layoutX="170.0" layoutY="181.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="33.0" layoutY="67.0" prefHeight="33.0" prefWidth="107.0" text="Nombre:" />
+            <TextField fx:id="nombre" layoutX="170.0" layoutY="70.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="33.0" layoutY="229.0" prefHeight="33.0" prefWidth="107.0" text="Descripcion:" />
+            <TextField fx:id="descripcion" layoutX="170.0" layoutY="232.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="33.0" layoutY="278.0" prefHeight="33.0" prefWidth="107.0" text="Categoria:" />
+            <TextField fx:id="categoria" layoutX="170.0" layoutY="281.0" prefHeight="25.0" prefWidth="185.0" />
+            <Button layoutX="446.0" layoutY="220.0" mnemonicParsing="false" onAction="#UpdateStock" prefHeight="25.0" prefWidth="140.0" text="Cambiar Stock">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons8_Purchase_Order_50px_1.png" />
+                     </image></ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="447.0" layoutY="269.0" mnemonicParsing="false" onAction="#UpdatePrecio" prefHeight="25.0" prefWidth="140.0" text="Cambiar Precio">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons8_US_Dollar_50px.png" />
+                     </image></ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="25.0" layoutY="385.0" prefHeight="33.0" prefWidth="165.0" text="Solicitud de abstecimiento" />
+            <Label layoutX="25.0" layoutY="21.0" prefHeight="33.0" prefWidth="208.0" text="Actualizar Articulos" />
+            <Label layoutX="33.0" layoutY="435.0" prefHeight="33.0" prefWidth="122.0" text="Articulo Solicitado:" />
+            <TextField fx:id="articulo" layoutX="170.0" layoutY="435.0" prefHeight="25.0" prefWidth="185.0" />
+            <TextField fx:id="cantidadArticulo" layoutX="170.0" layoutY="482.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="33.0" layoutY="478.0" prefHeight="33.0" prefWidth="120.0" text="Cantidad Solicitada :" />
+            <TextField fx:id="gerente" layoutX="170.0" layoutY="529.0" prefHeight="25.0" prefWidth="185.0" />
+            <TextField fx:id="direccion" layoutX="170.0" layoutY="628.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="33.0" layoutY="525.0" prefHeight="33.0" prefWidth="120.0" text="Gerente:" />
+            <Label layoutX="33.0" layoutY="624.0" prefHeight="33.0" prefWidth="120.0" text="Direccion" />
+            <Label layoutX="33.0" layoutY="582.0" prefHeight="33.0" prefWidth="120.0" text="Bodega:" />
+            <TextField fx:id="bodega" layoutX="170.0" layoutY="586.0" prefHeight="25.0" prefWidth="185.0" />
+            <Button layoutX="468.0" layoutY="640.0" mnemonicParsing="false" onAction="#solicitarAbas" text="Enviar Solicitud">
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons8_Trolley_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="_rootPermisos" layoutX="220.0" prefHeight="722.0" prefWidth="732.0">
+         <children>
+            <TextField fx:id="user" layoutX="156.0" layoutY="73.0" />
+            <TextField fx:id="tipo" layoutX="156.0" layoutY="133.0" />
+            <Label layoutX="53.0" layoutY="77.0" text="Usuario :" />
+            <Label layoutX="53.0" layoutY="137.0" text="Permiso :" />
+            <Button layoutX="53.0" layoutY="192.0" mnemonicParsing="false" onAction="#actualizarPermisos" text="Cambiar" />
+            <TableView fx:id="tableUser" layoutX="413.0" layoutY="66.0" prefHeight="200.0" prefWidth="255.0">
+              <columns>
+                <TableColumn fx:id="column_user" prefWidth="75.0" text="Usario" />
+                <TableColumn fx:id="column_tip" prefWidth="99.0" text="Permiso" />
+                  <TableColumn fx:id="column_iduser" minWidth="0.0" text="ID Usuario" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

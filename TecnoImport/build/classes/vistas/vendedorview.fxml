@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="973.0" stylesheets="@../assets/login.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.VendedorController">
+   <children>
+      <Button layoutX="54.0" layoutY="613.0" mnemonicParsing="false" onAction="#mostrarTabla" prefHeight="25.0" prefWidth="111.0" text="Mostrar Articulos" />
+      <Button layoutX="54.0" layoutY="647.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Registrar" />
+      <Button layoutX="173.0" layoutY="647.0" mnemonicParsing="false" onAction="#busquedaArticulo" text="Busqueda Produtctos" />
+      <AnchorPane fx:id="_rootBusqueda" layoutX="1.0" prefHeight="590.0" prefWidth="973.0">
+         <children>
+            <ComboBox layoutX="45.0" layoutY="71.0" prefWidth="150.0" promptText="Busqueda" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="_rootMostrar" layoutX="1.0" prefHeight="590.0" prefWidth="973.0">
+         <children>
+            <Label layoutX="24.0" layoutY="35.0" prefHeight="31.0" prefWidth="159.0" text="Busqueda de Productos" />
+            <TableView fx:id="table" layoutX="64.0" layoutY="95.0" prefHeight="236.0" prefWidth="799.0">
+              <columns>
+                <TableColumn fx:id="column_nombre" prefWidth="156.0" text="NOMBRE" />
+                <TableColumn fx:id="column_cantidad" prefWidth="83.0" text="STOCK" />
+                  <TableColumn fx:id="column_descripcion" prefWidth="212.0" text="DESCRIPCION" />
+                  <TableColumn fx:id="column_categoria" prefWidth="228.0" text="CATEGORIA" />
+                  <TableColumn fx:id="column_precio" prefWidth="116.0" text="PRECIO " />
+              </columns>
+            </TableView>
+            <Label layoutX="76.0" layoutY="479.0" prefHeight="25.0" prefWidth="111.0" text="Nombre producto:" />
+            <TextField layoutX="195.0" layoutY="479.0" />
+            <ComboBox fx:id="busqueda_categoria" layoutX="76.0" layoutY="433.0" onAction="#changeCategoria" prefHeight="22.0" prefWidth="171.0" promptText="Categoria" />
+            <ComboBox fx:id="busqueda" layoutX="76.0" layoutY="393.0" onAction="#changeValue" prefHeight="22.0" prefWidth="171.0" promptText="Descripcion" />
+            <Button layoutX="357.0" layoutY="479.0" mnemonicParsing="false" onAction="#clear" text="GO" />
+            <ComboBox layoutX="76.0" layoutY="357.0" prefHeight="22.0" prefWidth="171.0" promptText="Nombre" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="176.0" layoutY="613.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" text="Salir" />
+   </children>
+</AnchorPane>

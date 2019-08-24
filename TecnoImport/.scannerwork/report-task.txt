@@ -1,0 +1,6 @@
+projectKey=P02G08
+serverUrl=http://200.126.12.164
+serverVersion=6.7.6.38781
+dashboardUrl=http://200.126.12.164/dashboard/index/P02G08
+ceTaskId=AWy8STPTLm5p6v1cuI4N
+ceTaskUrl=http://200.126.12.164/api/ce/task?id=AWy8STPTLm5p6v1cuI4N
